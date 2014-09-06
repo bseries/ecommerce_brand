@@ -28,7 +28,7 @@ class Brands extends \base_core\models\Base {
 	protected static $_actsAs = [
 		'base_media\extensions\data\behavior\Coupler' => [
 			'bindings' => [
-				'cover' => [
+				'logo' => [
 					'type' => 'direct',
 					'to' => 'logo_media_id'
 				],
