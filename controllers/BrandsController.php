@@ -14,7 +14,7 @@ namespace ecommerce_brand\controllers;
 
 use ecommerce_brand\models\Brands;
 
-class BannersController extends \base_core\controllers\BaseController {
+class BrandsController extends \base_core\controllers\BaseController {
 
 	use \base_core\controllers\AdminAddTrait;
 	use \base_core\controllers\AdminEditTrait;

@@ -18,16 +18,31 @@ $this->set([
 			<div class="grid-column-left">
 				<?= $this->form->field('name', ['type' => 'text', 'label' => $t('Name'), 'class' => 'use-for-title']) ?>
 
+			</div>
+			<div class="grid-column-right">
 				<?= $this->form->field('url', [
 					'type' => 'text',
 					'label' => $t('Link'),
 					'placeholder' => $t('https://foo.com/bar or /bar')]
 				) ?>
 			</div>
-			<div class="grid-column-right">
+		</div>
+		<div class="grid-row">
+			<div class="grid-column-left">
 				<div class="media-attachment use-media-attachment-direct">
 					<?= $this->form->label('BrandLogoMediaId', $t('Logo')) ?>
 					<?= $this->form->hidden('logo_media_id') ?>
+					<div class="selected"></div>
+					<?= $this->html->link($t('select'), '#', ['class' => 'button select']) ?>
+				</div>
+			</div>
+			<div class="grid-column-right">
+				<div class="media-attachment use-media-attachment-joined">
+					<?= $this->form->label('BrandsMedia', $t('Media')) ?>
+					<?php foreach ($item->media() as $media): ?>
+						<?= $this->form->hidden('media.' . $media->id . '.id', ['value' => $media->id]) ?>
+					<?php endforeach ?>
+
 					<div class="selected"></div>
 					<?= $this->html->link($t('select'), '#', ['class' => 'button select']) ?>
 				</div>
@@ -42,15 +57,6 @@ $this->set([
 				]) ?>
 			</div>
 			<div class="grid-column-right">
-				<div class="media-attachment use-media-attachment-joined">
-					<?= $this->form->label('BrandsMedia', $t('Media')) ?>
-					<?php foreach ($item->media() as $media): ?>
-						<?= $this->form->hidden('media.' . $media->id . '.id', ['value' => $media->id]) ?>
-					<?php endforeach ?>
-
-					<div class="selected"></div>
-					<?= $this->html->link($t('select'), '#', ['class' => 'button select']) ?>
-				</div>
 			</div>
 		</div>
 		<div class="bottom-actions">

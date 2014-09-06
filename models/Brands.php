@@ -14,6 +14,10 @@ namespace ecommerce_brand\models;
 
 class Brands extends \base_core\models\Base {
 
+	protected $_meta = [
+		'source' => 'ecommerce_brands'
+	];
+
 	public $belongsTo = [
 		'LogoMedia' => [
 			'to' => 'base_media\models\Media',
