@@ -6,6 +6,9 @@ $this->set([
 		'title' => $item->name,
 		'empty' => $t('unnamed'),
 		'object' => $t('brand')
+	],
+	'meta' => [
+		'is_published' => $item->is_published ? $t('published') : $t('unpublished')
 	]
 ]);
 
@@ -60,6 +63,9 @@ $this->set([
 			</div>
 		</div>
 		<div class="bottom-actions">
+			<?php if ($item->exists()): ?>
+				<?= $this->html->link($item->is_published ? $t('unpublish') : $t('publish'), ['id' => $item->id, 'action' => $item->is_published ? 'unpublish': 'publish', 'library' => 'ecommerce_brand'], ['class' => 'button large']) ?>
+			<?php endif ?>
 			<?= $this->form->button($t('save'), ['type' => 'submit', 'class' => 'large save']) ?>
 		</div>
 	<?=$this->form->end() ?>

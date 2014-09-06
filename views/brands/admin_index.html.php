@@ -18,6 +18,7 @@ $this->set([
 		<table>
 			<thead>
 				<tr>
+					<td class="flag"><?= $t('publ.?') ?>
 					<td>
 					<td class="emphasize"><?= $t('Name') ?>
 					<td class="date created"><?= $t('Created') ?>
@@ -26,6 +27,7 @@ $this->set([
 			<tbody>
 				<?php foreach ($data as $item): ?>
 				<tr>
+					<td class="flag"><?= ($item->is_published ? '✓' : '×') ?>
 					<td>
 						<?php if (($media = $item->logo()) && ($version = $media->version('fix3admin'))): ?>
 							<?= $this->media->image($version, ['class' => 'media']) ?>
