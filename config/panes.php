@@ -17,7 +17,8 @@ extract(Message::aliases());
 
 Panes::register('ecommerce.brands', [
 	'title' => $t('Brands'),
-	'url' => ['controller' => 'brands', 'action' => 'index', 'library' => 'ecommerce_brand', 'admin' => true]
+	'url' => ['controller' => 'brands', 'action' => 'index', 'library' => 'ecommerce_brand', 'admin' => true],
+	'weight' => 12
 ]);
 
 ?>
