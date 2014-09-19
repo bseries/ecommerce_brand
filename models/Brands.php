@@ -12,7 +12,11 @@
 
 namespace ecommerce_brand\models;
 
+use ecommerce_core\models\Products;
+
 class Brands extends \base_core\models\Base {
+
+	use \base_core\models\SlugTrait;
 
 	protected $_meta = [
 		'source' => 'ecommerce_brands'
@@ -40,6 +44,14 @@ class Brands extends \base_core\models\Base {
 		],
 		'base_core\extensions\data\behavior\Timestamp'
 	];
+
+	public function products($entity, array $query = []) {
+		return Products::find('all', [
+			'conditions' => [
+				'ecommerce_brand_id' => $entity->id
+			] + (isset($query['conditions']) ? $query['conditions'] : [])
+		] + $query);
+	}
 }
 
 ?>
