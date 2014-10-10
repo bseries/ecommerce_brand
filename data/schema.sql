@@ -10,5 +10,5 @@ CREATE TABLE `ecommerce_brands` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-ALTER TABLE `ecommerce_products` ADD `ecommerce_brand_id` INT(11)  UNSIGNED  NULL  DEFAULT NULL  AFTER `cover_media_id`;
+ALTER TABLE `ecommerce_product_groups` ADD `ecommerce_brand_id` INT(11)  UNSIGNED  NULL  DEFAULT NULL  AFTER `cover_media_id`;
 
