@@ -12,7 +12,7 @@
 
 namespace ecommerce_brand\models;
 
-use ecommerce_core\models\Products;
+use ecommerce_core\models\ProductGroups;
 
 class Brands extends \base_core\models\Base {
 
@@ -45,8 +45,8 @@ class Brands extends \base_core\models\Base {
 		'base_core\extensions\data\behavior\Timestamp'
 	];
 
-	public function products($entity, array $query = []) {
-		return Products::find('all', [
+	public function productGroups($entity, array $query = []) {
+		return ProductGroups::find('all', [
 			'conditions' => [
 				'ecommerce_brand_id' => $entity->id
 			] + (isset($query['conditions']) ? $query['conditions'] : [])
