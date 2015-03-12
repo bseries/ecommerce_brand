@@ -10,15 +10,13 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
-namespace ecommerce_brand\controllers;
+use lithium\g11n\Catalog;
 
-class BrandsController extends \base_core\controllers\BaseController {
-
-	use \base_core\controllers\AdminIndexTrait;
-	use \base_core\controllers\AdminAddTrait;
-	use \base_core\controllers\AdminEditTrait;
-	use \base_core\controllers\AdminDeleteTrait;
-	use \base_core\controllers\AdminPublishTrait;
-}
+Catalog::config([
+	basename(dirname(__DIR__)) => [
+		'adapter' => 'Gettext',
+		'path' => dirname(__DIR__) . '/resources/g11n/po'
+	 ]
+] + Catalog::config());
 
 ?>

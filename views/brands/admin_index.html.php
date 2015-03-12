@@ -1,5 +1,11 @@
 <?php
 
+use lithium\g11n\Message;
+
+$t = function($message, array $options = []) {
+	return Message::translate($message, $options + ['scope' => 'ecommerce_brand', 'default' => $message]);
+};
+
 $this->set([
 	'page' => [
 		'type' => 'multiple',
@@ -8,7 +14,15 @@ $this->set([
 ]);
 
 ?>
-<article class="view-<?= $this->_config['controller'] . '-' . $this->_config['template'] ?>">
+<article
+	class="use-index-table"
+	data-endpoint-sort="<?= $this->url([
+		'action' => 'index',
+		'page' => $paginator->getPages()->current,
+		'orderField' => '__ORDER_FIELD__',
+		'orderDirection' => '__ORDER_DIRECTION__'
+	]) ?>"
+>
 
 	<div class="top-actions">
 		<?= $this->html->link($t('new brand'), ['action' => 'add', 'library' => 'ecommerce_brand'], ['class' => 'button add']) ?>
@@ -18,10 +32,10 @@ $this->set([
 		<table>
 			<thead>
 				<tr>
-					<td class="flag"><?= $t('publ.?') ?>
+					<td data-sort="is-published" class="is-published flag"><?= $t('publ.?') ?>
 					<td class="media">
-					<td class="emphasize"><?= $t('Name') ?>
-					<td class="date created"><?= $t('Created') ?>
+					<td data-sort="name" class="name emphasize"><?= $t('Name') ?>
+					<td data-sort="modified" class="date modified desc"><?= $t('Modified') ?>
 					<td class="actions">
 			</thead>
 			<tbody>
@@ -35,9 +49,9 @@ $this->set([
 							]) ?>
 						<?php endif ?>
 					<td class="emphasize"><?= $item->name ?: '–' ?>
-					<td class="date created">
-						<time datetime="<?= $this->date->format($item->created, 'w3c') ?>">
-							<?= $this->date->format($item->created, 'date') ?>
+					<td class="date modified">
+						<time datetime="<?= $this->date->format($item->modified, 'w3c') ?>">
+							<?= $this->date->format($item->modified, 'date') ?>
 						</time>
 					<td class="actions">
 						<?= $this->html->link($item->is_published ? $t('unpublish') : $t('publish'), ['id' => $item->id, 'action' => $item->is_published ? 'unpublish': 'publish', 'library' => 'ecommerce_brand'], ['class' => 'button']) ?>
@@ -48,4 +62,6 @@ $this->set([
 	<?php else: ?>
 		<div class="none-available"><?= $t('No items available, yet.') ?></div>
 	<?php endif ?>
+
+	<?=$this->view()->render(['element' => 'paging'], compact('paginator'), ['library' => 'base_core']) ?>
 </article>

@@ -16,7 +16,7 @@ use lithium\g11n\Message;
 extract(Message::aliases());
 
 Panes::register('ecommerce.brands', [
-	'title' => $t('Brands'),
+	'title' => $t('Brands', ['scope' => 'ecommerce_brand']),
 	'url' => ['controller' => 'brands', 'action' => 'index', 'library' => 'ecommerce_brand', 'admin' => true],
 	'weight' => 12
 ]);
