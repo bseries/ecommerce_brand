@@ -33,10 +33,10 @@ $this->set([
 		<table>
 			<thead>
 				<tr>
-					<td data-sort="is-published" class="is-published flag"><?= $t('publ.?') ?>
+					<td data-sort="is-published" class="is-published tables-sort flag"><?= $t('publ.?') ?>
 					<td class="media">
-					<td data-sort="name" class="name emphasize"><?= $t('Name') ?>
-					<td data-sort="modified" class="date modified desc"><?= $t('Modified') ?>
+					<td data-sort="name" class="name tables-sort emphasize"><?= $t('Name') ?>
+					<td data-sort="modified" class="date tables-sort modified desc"><?= $t('Modified') ?>
 					<td class="actions">
 						<?= $this->form->field('search', [
 							'type' => 'search',
