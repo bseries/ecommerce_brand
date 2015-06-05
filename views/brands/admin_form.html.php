@@ -59,14 +59,13 @@ $this->set([
 		</div>
 		<div class="grid-row">
 			<div class="grid-column-left">
-				<?= $this->form->field('description', [
-					'type' => 'textarea',
+				<?= $this->editor->field('description', [
 					'label' => $t('Description'),
-					'wrap' => ['class' => 'body use-editor editor-basic editor-link']
+					'size' => 'beta',
+					'features' => 'minimal'
 				]) ?>
 			</div>
-			<div class="grid-column-right">
-			</div>
+			<div class="grid-column-right"></div>
 		</div>
 		<div class="bottom-actions">
 			<?php if ($item->exists()): ?>
