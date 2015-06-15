@@ -16,8 +16,6 @@ use ecommerce_core\models\ProductGroups;
 
 class Brands extends \base_core\models\Base {
 
-	use \base_core\models\SlugTrait;
-
 	protected $_meta = [
 		'source' => 'ecommerce_brands'
 	];
@@ -30,6 +28,7 @@ class Brands extends \base_core\models\Base {
 	];
 
 	protected static $_actsAs = [
+		'base_media\extensions\data\behavior\Sluggable',
 		'base_media\extensions\data\behavior\Coupler' => [
 			'bindings' => [
 				'logo' => [
