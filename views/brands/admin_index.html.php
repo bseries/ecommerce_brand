@@ -49,7 +49,7 @@ $this->set([
 			<tbody>
 				<?php foreach ($data as $item): ?>
 				<tr>
-					<td class="flag"><?= ($item->is_published ? '✓' : '×') ?>
+					<td class="flag"><i class="material-icons"><?= ($item->is_published ? 'done' : '') ?></i>
 					<td class="media">
 						<?php if (($media = $item->logo()) && ($version = $media->version('fix3admin'))): ?>
 							<?= $this->media->image($version, [
