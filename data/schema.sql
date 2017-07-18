@@ -8,7 +8,7 @@ CREATE TABLE `ecommerce_brands` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ALTER TABLE `ecommerce_product_groups` ADD `ecommerce_brand_id` INT(11)  UNSIGNED  NULL  DEFAULT NULL  AFTER `cover_media_id`;
 
