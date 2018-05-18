@@ -26,9 +26,9 @@ class Brands extends \base_core\models\Base {
 	];
 
 	public $belongsTo = [
-		'LogoMedia' => [
+		'CoverMedia' => [
 			'to' => 'base_media\models\Media',
-			'key' => 'logo_media_id'
+			'key' => 'cover_media_id'
 		]
 	];
 
@@ -36,9 +36,9 @@ class Brands extends \base_core\models\Base {
 		'base_core\extensions\data\behavior\Sluggable',
 		'base_media\extensions\data\behavior\Coupler' => [
 			'bindings' => [
-				'logo' => [
+				'cover' => [
 					'type' => 'direct',
-					'to' => 'logo_media_id'
+					'to' => 'cover_media_id'
 				],
 				'media' => [
 					'type' => 'joined',

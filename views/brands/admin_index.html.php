@@ -51,7 +51,7 @@ $this->set([
 				<tr>
 					<td class="flag"><i class="material-icons"><?= ($item->is_published ? 'done' : '') ?></i>
 					<td class="media">
-						<?php if (($media = $item->logo()) && ($version = $media->version('fix3admin'))): ?>
+						<?php if (($media = $item->cover()) && ($version = $media->version('fix3admin'))): ?>
 							<?= $this->media->image($version, [
 								'data-media-id' => $media->id, 'alt' => 'preview'
 							]) ?>

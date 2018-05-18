@@ -40,10 +40,10 @@ $this->set([
 		</div>
 		<div class="grid-row">
 			<div class="grid-column-left">
-				<?= $this->media->field('logo_media_id', [
-					'label' => $t('Logo'),
+				<?= $this->media->field('cover_media_id', [
+					'label' => $t('Cover'),
 					'attachment' => 'direct',
-					'value' => $item->logo()
+					'value' => $item->cover()
 				]) ?>
 			</div>
 			<div class="grid-column-right">
