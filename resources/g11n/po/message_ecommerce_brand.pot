@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Atelier Disko
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the ecommerce_brand package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ecommerce_brand 1.0\n"
 "Report-Msgid-Bugs-To: info@atelierdisko.de\n"
-"POT-Creation-Date: 2015-03-12 18:04+0100\n"
+"POT-Creation-Date: 2018-07-12 12:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: config/panes.php:19
+#: config/panes.php:24
 msgid "Brands"
 msgstr ""
 
@@ -25,7 +25,7 @@ msgstr ""
 msgid "unnamed"
 msgstr ""
 
-#: views/brands/admin_form.html.php:14
+#: views/brands/admin_form.html.php:14 views/brands/admin_index.html.php:29
 msgid "brand"
 msgstr ""
 
@@ -37,43 +37,43 @@ msgstr ""
 msgid "unpublished"
 msgstr ""
 
-#: views/brands/admin_form.html.php:28 views/brands/admin_index.html.php:37
+#: views/brands/admin_form.html.php:30 views/brands/admin_index.html.php:38
 msgid "Name"
 msgstr ""
 
-#: views/brands/admin_form.html.php:34
+#: views/brands/admin_form.html.php:36
 msgid "Link"
 msgstr ""
 
-#: views/brands/admin_form.html.php:35
+#: views/brands/admin_form.html.php:37
 msgid "https://foo.com/bar or /bar"
 msgstr ""
 
-#: views/brands/admin_form.html.php:42
-msgid "Logo"
+#: views/brands/admin_form.html.php:44
+msgid "Cover"
 msgstr ""
 
-#: views/brands/admin_form.html.php:45 views/brands/admin_form.html.php:56
-msgid "select"
-msgstr ""
-
-#: views/brands/admin_form.html.php:50
+#: views/brands/admin_form.html.php:51
 msgid "Media"
 msgstr ""
 
-#: views/brands/admin_form.html.php:64
+#: views/brands/admin_form.html.php:60
 msgid "Description"
 msgstr ""
 
-#: views/brands/admin_form.html.php:73 views/brands/admin_index.html.php:57
+#: views/brands/admin_form.html.php:71
+msgid "delete"
+msgstr ""
+
+#: views/brands/admin_form.html.php:78 views/brands/admin_index.html.php:65
 msgid "publish"
 msgstr ""
 
-#: views/brands/admin_form.html.php:73 views/brands/admin_index.html.php:57
+#: views/brands/admin_form.html.php:78 views/brands/admin_index.html.php:65
 msgid "unpublish"
 msgstr ""
 
-#: views/brands/admin_form.html.php:75
+#: views/brands/admin_form.html.php:80
 msgid "save"
 msgstr ""
 
@@ -81,22 +81,22 @@ msgstr ""
 msgid "brands"
 msgstr ""
 
-#: views/brands/admin_index.html.php:28
-msgid "new brand"
-msgstr ""
-
-#: views/brands/admin_index.html.php:35
+#: views/brands/admin_index.html.php:36
 msgid "publ.?"
 msgstr ""
 
-#: views/brands/admin_index.html.php:38
+#: views/brands/admin_index.html.php:39
 msgid "Modified"
 msgstr ""
 
-#: views/brands/admin_index.html.php:58
+#: views/brands/admin_index.html.php:44
+msgid "Filter"
+msgstr ""
+
+#: views/brands/admin_index.html.php:66
 msgid "open"
 msgstr ""
 
-#: views/brands/admin_index.html.php:63
+#: views/brands/admin_index.html.php:71
 msgid "No items available, yet."
 msgstr ""
