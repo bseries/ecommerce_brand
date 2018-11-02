@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ecommerce_brand 1.0\n"
 "Report-Msgid-Bugs-To: info@atelierdisko.de\n"
-"POT-Creation-Date: 2015-03-12 18:04+0100\n"
-"PO-Revision-Date: 2015-03-12 18:04+0100\n"
+"POT-Creation-Date: 2018-07-12 12:51+0200\n"
+"PO-Revision-Date: 2018-07-12 13:16+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -16,87 +16,88 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.12\n"
 
-#: config/panes.php:19
+#: config/panes.php:24
 msgid "Brands"
-msgstr ""
+msgstr "Marken"
 
 #: views/brands/admin_form.html.php:13
 msgid "unnamed"
-msgstr ""
+msgstr "unbenannt"
 
-#: views/brands/admin_form.html.php:14
+#: views/brands/admin_form.html.php:14 views/brands/admin_index.html.php:29
 msgid "brand"
-msgstr ""
+msgstr "Marke"
 
 #: views/brands/admin_form.html.php:17
 msgid "published"
-msgstr ""
+msgstr "publiziert"
 
 #: views/brands/admin_form.html.php:17
 msgid "unpublished"
-msgstr ""
+msgstr "unpubliziert"
 
-#: views/brands/admin_form.html.php:28 views/brands/admin_index.html.php:37
+#: views/brands/admin_form.html.php:30 views/brands/admin_index.html.php:38
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
-#: views/brands/admin_form.html.php:34
+#: views/brands/admin_form.html.php:36
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
-#: views/brands/admin_form.html.php:35
+#: views/brands/admin_form.html.php:37
 msgid "https://foo.com/bar or /bar"
-msgstr ""
+msgstr "https://foo.de/bar oder /bar"
 
-#: views/brands/admin_form.html.php:42
-msgid "Logo"
-msgstr ""
+#: views/brands/admin_form.html.php:44
+msgid "Cover"
+msgstr "Cover"
 
-#: views/brands/admin_form.html.php:45 views/brands/admin_form.html.php:56
-msgid "select"
-msgstr ""
-
-#: views/brands/admin_form.html.php:50
+#: views/brands/admin_form.html.php:51
 msgid "Media"
-msgstr ""
+msgstr "Medien"
 
-#: views/brands/admin_form.html.php:64
+#: views/brands/admin_form.html.php:60
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
-#: views/brands/admin_form.html.php:73 views/brands/admin_index.html.php:57
+#: views/brands/admin_form.html.php:71
+msgid "delete"
+msgstr "löschen"
+
+#: views/brands/admin_form.html.php:78 views/brands/admin_index.html.php:65
 msgid "publish"
-msgstr ""
+msgstr "publizieren"
 
-#: views/brands/admin_form.html.php:73 views/brands/admin_index.html.php:57
+#: views/brands/admin_form.html.php:78 views/brands/admin_index.html.php:65
 msgid "unpublish"
-msgstr ""
+msgstr "depublizieren"
 
-#: views/brands/admin_form.html.php:75
+#: views/brands/admin_form.html.php:80
 msgid "save"
-msgstr ""
+msgstr "speichern"
 
 #: views/brands/admin_index.html.php:12
 msgid "brands"
-msgstr ""
+msgstr "Marken"
 
-#: views/brands/admin_index.html.php:28
-msgid "new brand"
-msgstr ""
-
-#: views/brands/admin_index.html.php:35
+#: views/brands/admin_index.html.php:36
 msgid "publ.?"
-msgstr ""
+msgstr "publ.?"
 
-#: views/brands/admin_index.html.php:38
+#: views/brands/admin_index.html.php:39
 msgid "Modified"
-msgstr ""
+msgstr "Bearbeitet"
 
-#: views/brands/admin_index.html.php:58
+#: views/brands/admin_index.html.php:44
+msgid "Filter"
+msgstr "Filter"
+
+#: views/brands/admin_index.html.php:66
 msgid "open"
-msgstr ""
+msgstr "öffnen"
 
-#: views/brands/admin_index.html.php:63
+#: views/brands/admin_index.html.php:71
 msgid "No items available, yet."
-msgstr ""
+msgstr "Es sind noch keine Einträge verfügbar."
